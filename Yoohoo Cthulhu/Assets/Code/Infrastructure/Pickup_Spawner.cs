@@ -12,11 +12,11 @@ public class Pickup_Spawner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Instantiate(Items0[0], new Vector3(0, -100, 0), Quaternion.identity);
-        Instantiate(Items1[0], new Vector3(0, -100, 0), Quaternion.identity);
-        Instantiate(Items2[0], new Vector3(0, -100, 0), Quaternion.identity);
-        Instantiate(Items3[0], new Vector3(0, -100, 0), Quaternion.identity);
-        Instantiate(Items4[0], new Vector3(0, -100, 0), Quaternion.identity);
+      //  Instantiate(Items0[0], new Vector3(0, -100, 0), Quaternion.identity);
+      //  Instantiate(Items1[0], new Vector3(0, -100, 0), Quaternion.identity);
+      //  Instantiate(Items2[0], new Vector3(0, -100, 0), Quaternion.identity);
+      //  Instantiate(Items3[0], new Vector3(0, -100, 0), Quaternion.identity);
+      // Instantiate(Items4[0], new Vector3(0, -100, 0), Quaternion.identity);
         for (int y = 0; y < 1500; y += 10)
         {
             for (int x = -15; x < 15; x += 3)
