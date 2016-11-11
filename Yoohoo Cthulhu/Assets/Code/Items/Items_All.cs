@@ -46,6 +46,10 @@ public class Items_All : MonoBehaviour
             {
                 Character_Management.transmutationExpire = 10;
             }
+            else if(gameObject.tag == "Repair")
+            {
+                Character_Management.health++;
+            }
             gameObject.SetActive(false);
         }
     }

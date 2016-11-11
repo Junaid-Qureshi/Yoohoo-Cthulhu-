@@ -17,12 +17,12 @@ public class Pickup_Spawner : MonoBehaviour {
       //  Instantiate(Items2[0], new Vector3(0, -100, 0), Quaternion.identity);
       //  Instantiate(Items3[0], new Vector3(0, -100, 0), Quaternion.identity);
       // Instantiate(Items4[0], new Vector3(0, -100, 0), Quaternion.identity);
-        for (int y = 0; y < 1500; y += 10)
+        for (int y = 0; y < 1500; y += 5)
         {
             for (int x = -15; x < 15; x += 3)
             {
                 randomValue = Random.Range(0, 100);
-                if (y < 300)
+                if (y <= 175)
                 {
                     if (Items0[randomValue] != null)
                     {
@@ -30,36 +30,36 @@ public class Pickup_Spawner : MonoBehaviour {
                         Instantiate(Items0[randomValue], pos, Quaternion.identity);
                     }
                 }
-                else if(y > 300 && y < 600)
+                else if(y > 175 && y <= 400)
                 {
                     if (Items1[randomValue] != null)
                     {
                         pos = new Vector3(x, -y, 0);
-                        Instantiate(Items0[randomValue], pos, Quaternion.identity);
+                        Instantiate(Items1[randomValue], pos, Quaternion.identity);
                     }
                 }
-                else if(y > 600 && y < 900)
+                else if(y > 400 && y <= 675)
                 {
                     if (Items2[randomValue] != null)
                     {
                         pos = new Vector3(x, -y, 0);
-                        Instantiate(Items0[randomValue], pos, Quaternion.identity);
+                        Instantiate(Items2[randomValue], pos, Quaternion.identity);
                     }
                 }
-                else if(y > 900 && y < 1200)
+                else if(y > 675 && y <= 1050)
                 {
                     if (Items3[randomValue] != null)
                     {
                         pos = new Vector3(x, -y, 0);
-                        Instantiate(Items0[randomValue], pos, Quaternion.identity);
+                        Instantiate(Items3[randomValue], pos, Quaternion.identity);
                     }
                 }
-                else if(y > 1200 && y < 1500)
+                else if(y > 1050 && y < 1500)
                 {
                     if (Items4[randomValue] != null)
                     {
                         pos = new Vector3(x, -y, 0);
-                        Instantiate(Items0[randomValue], pos, Quaternion.identity);
+                        Instantiate(Items4[randomValue], pos, Quaternion.identity);
                     }
                 }
             }

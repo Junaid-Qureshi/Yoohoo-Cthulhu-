@@ -50,6 +50,7 @@ public class Hazard_All : MonoBehaviour {
                     Character_Management.transform.rotation = Quaternion.Euler(0, 0, 90);
                 }
                 Character_Management.controllable = false;
+                Character_Management.DealDamage();
             }
         }
         else if (hit.tag == "TNTBoom")

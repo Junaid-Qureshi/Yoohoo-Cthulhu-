@@ -68,6 +68,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfcf9bbf99088ac428f701602fa56cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stages:
+  - {fileID: 21300000, guid: 1d8ceedbd456ab844aea104e830fb79c, type: 3}
+  - {fileID: 21300002, guid: 1d8ceedbd456ab844aea104e830fb79c, type: 3}
+  - {fileID: 21300004, guid: 1d8ceedbd456ab844aea104e830fb79c, type: 3}
+  - {fileID: 21300006, guid: 1d8ceedbd456ab844aea104e830fb79c, type: 3}
+  - {fileID: 21300008, guid: 1d8ceedbd456ab844aea104e830fb79c, type: 3}
 --- !u!114 &114000014289893538
 MonoBehaviour:
   m_ObjectHideFlags: 1

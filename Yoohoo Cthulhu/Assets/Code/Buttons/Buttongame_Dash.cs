@@ -4,10 +4,11 @@ using System.Collections;
 public class Buttongame_Dash : MonoBehaviour {
 
     private Character Player_main;
+    public float SpeedPrev;
     // Use this for initialization
     void Start () {
         Player_main = GameObject.Find("Character").GetComponent<Character>();
-
+        SpeedPrev = 0;
 	}
 	
 	// Update is called once per frame
@@ -17,6 +18,7 @@ public class Buttongame_Dash : MonoBehaviour {
 
     void OnMouseDown()
     {
+        SpeedPrev = Player_main.speed;
         Player_main.speed = 100f;
         StartCoroutine(Wait());
     }
@@ -24,6 +26,6 @@ public class Buttongame_Dash : MonoBehaviour {
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(.1f);
-        Player_main.speed = 5.5f;
+        Player_main.speed = SpeedPrev;
     }
 }

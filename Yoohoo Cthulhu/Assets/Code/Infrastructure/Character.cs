@@ -80,7 +80,7 @@ public class Character : MonoBehaviour {
         }
             transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * speed);
         //Debug.Log(transform.position.x);
-
+        speed += Time.deltaTime * .03f;
     }
 
     public void DealDamage()

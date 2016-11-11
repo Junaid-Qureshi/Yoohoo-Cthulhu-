@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class TentacleActive : MonoBehaviour {
+
+    public Sprite[] stages = new Sprite[5];
     // Use this for initialization
     void Start () {
         
@@ -17,28 +19,34 @@ public class TentacleActive : MonoBehaviour {
 	}
     void frame1()
     {
+        gameObject.GetComponent<SpriteRenderer>().sprite = stages[0];
         Invoke("frame2", .1f);
+        gameObject.GetComponent<SpriteRenderer>().sprite = stages[0];
     }
     void frame2()
     {
+        gameObject.GetComponent<SpriteRenderer>().sprite = stages[1];
         Invoke("frame3", .1f);
+        gameObject.GetComponent<SpriteRenderer>().sprite = stages[1];
     }
     void frame3()
     {
+        gameObject.GetComponent<SpriteRenderer>().sprite = stages[2];
         Invoke("frame4", .1f);
+        gameObject.GetComponent<SpriteRenderer>().sprite = stages[2];
     }
     void frame4()
     {
+        gameObject.GetComponent<SpriteRenderer>().sprite = stages[3];
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
         Invoke("frame5", 1f);
+        gameObject.GetComponent<SpriteRenderer>().sprite = stages[3];
     }
     void frame5()
     {
+        gameObject.GetComponent<SpriteRenderer>().sprite = stages[4];
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        Invoke("frame6", .1f);
-    }
-    void frame6()
-    {
         Invoke("frame1", .1f);
+        gameObject.GetComponent<SpriteRenderer>().sprite = stages[4];
     }
 }
